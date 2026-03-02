@@ -1,0 +1,52 @@
+{
+  "version": "1.0.0",
+  "models": {
+    "haiku": {
+      "id": "claude-haiku-4-5-20251001",
+      "label": "Haiku 4.5",
+      "costPer1kInput": 0.001,
+      "costPer1kOutput": 0.005,
+      "maxTokens": 8192,
+      "strengths": ["fast", "simple-tasks", "classification", "extraction"],
+      "complexityRange": [0, 0.35]
+    },
+    "sonnet": {
+      "id": "claude-sonnet-4-6",
+      "label": "Sonnet 4.6",
+      "costPer1kInput": 0.003,
+      "costPer1kOutput": 0.015,
+      "maxTokens": 16384,
+      "strengths": ["balanced", "coding", "analysis", "general"],
+      "complexityRange": [0.3, 0.7]
+    },
+    "opus": {
+      "id": "claude-opus-4-6",
+      "label": "Opus 4.6",
+      "costPer1kInput": 0.015,
+      "costPer1kOutput": 0.075,
+      "maxTokens": 32768,
+      "strengths": ["complex-reasoning", "research", "creative-writing", "architecture"],
+      "complexityRange": [0.65, 1.0]
+    }
+  },
+  "taskPatterns": {
+    "simple": {
+      "keywords": ["summarize", "extract", "classify", "list", "translate", "format", "convert", "count", "check", "validate"],
+      "complexityBonus": -0.2
+    },
+    "moderate": {
+      "keywords": ["analyze", "compare", "explain", "review", "debug", "refactor", "test", "document", "optimize", "improve"],
+      "complexityBonus": 0.0
+    },
+    "complex": {
+      "keywords": ["architect", "design", "implement", "research", "create", "build", "develop", "integrate", "migrate", "plan"],
+      "complexityBonus": 0.2
+    }
+  },
+  "contextDepthWeights": {
+    "shortContext": { "maxTokens": 500, "weight": -0.15 },
+    "mediumContext": { "maxTokens": 2000, "weight": 0.0 },
+    "longContext": { "maxTokens": 8000, "weight": 0.15 },
+    "veryLongContext": { "maxTokens": 999999, "weight": 0.3 }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "model-router",
+  "version": "1.0.0",
+  "description": "Automatically routes AI tasks to optimal models based on complexity and cost to minimize token waste and maximize budget efficiency.",
+  "main": "scripts/model-router.js",
+  "bin": {
+    "model-router": "scripts/cli.js"
+  },
+  "scripts": {
+    "start": "node scripts/cli.js",
+    "route": "node scripts/cli.js route",
+    "test": "node --test scripts/*.test.js"
+  },
+  "keywords": [
+    "model-routing",
+    "cost-optimization",
+    "ai",
+    "token-management"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

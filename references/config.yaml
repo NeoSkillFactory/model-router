@@ -1,0 +1,35 @@
+# Model Router Configuration
+# Customize routing behavior by editing this file.
+
+# Default model to use when routing fails or complexity is ambiguous
+defaultModel: sonnet
+
+# Base complexity score (0.0 - 1.0) before keyword/context adjustments
+baseComplexity: 0.5
+
+# Weight factors for the routing algorithm
+weights:
+  # How much keyword matching affects complexity score (0.0 - 1.0)
+  keywords: 0.4
+  # How much context length affects complexity score (0.0 - 1.0)
+  contextDepth: 0.3
+  # How much estimated token count affects complexity score (0.0 - 1.0)
+  tokenEstimate: 0.3
+
+# Cost optimization settings
+costOptimization:
+  # When true, prefer cheaper models when complexity is in overlap range
+  preferCheaper: true
+  # Monthly budget cap in USD (0 = unlimited)
+  monthlyBudgetCap: 0
+  # Track cumulative costs in this file (empty = no tracking)
+  costLogFile: ""
+
+# Output format for CLI results
+output:
+  # json | text | minimal
+  format: json
+  # Include cost estimates in output
+  includeCostEstimate: true
+  # Include complexity breakdown in output
+  includeComplexityBreakdown: true
