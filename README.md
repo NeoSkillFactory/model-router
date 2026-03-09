@@ -2,20 +2,42 @@
 
 ![Audit](https://img.shields.io/badge/audit%3A%20PASS-brightgreen) ![License](https://img.shields.io/badge/license-MIT-blue) ![OpenClaw](https://img.shields.io/badge/OpenClaw-skill-orange)
 
-> A skill that automatically routes tasks to appropriate models based on complexity and cost to reduce token waste and optimize monthly expenses
+> Automatically routes AI tasks to optimal models based on complexity and cost to minimize token waste and maximize budget efficiency.
 
-I don't have access to the previous conversation context, so I can't continue where you left off. Could you please provide the task or context you'd like me to work on?
+## Features
 
-## OpenClaw Marketplace
+- **Task Complexity Analysis**: Evaluates task descriptions using keyword detection, token counting, and context depth analysis to determine complexity level (low, medium, high).
+- **Cost-Optimized Model Selection**: Routes tasks to the most cost-effective model that meets quality requirements, using multi-criteria scoring.
+- **CLI Accessibility**: Provides a clean command-line interface for direct usage and easy integration with scripts and pipelines.
+- **Usage Tracking**: Logs routing decisions and estimated cost savings for reporting.
 
-This skill is available on [ClawHub](https://clawhub.ai) — the OpenClaw skill marketplace.
-Install it in any OpenClaw agent workspace with:
+## Usage
 
 ```bash
-clawhub install model-router
+# Route a task
+node scripts/cli.js route "Summarize this short paragraph"
+
+# Route with custom config
+node scripts/cli.js route "Build a complex data pipeline" --config references/config.yaml
+
+# Show current routing rules
+node scripts/cli.js rules
+
+# Analyze complexity only
+node scripts/cli.js analyze "Write a haiku about cats"
 ```
 
-**Recommended price when commercial:** $29.99 USD
+## Configuration
+
+- Customizable routing rules via `references/config.yaml`
+- Task type-specific configurations in `assets/routing-rules.json`
+- Model preference overrides via CLI flags
+
+## GitHub
+
+Source code: [github.com/NeoSkillFactory/model-router](https://github.com/NeoSkillFactory/model-router)
+
+**Price suggestion:** $29.99 USD
 
 ## License
 
