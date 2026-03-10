@@ -37,8 +37,6 @@ node scripts/cli.js analyze "Write a haiku about cats"
 
 Source code: [github.com/NeoSkillFactory/model-router](https://github.com/NeoSkillFactory/model-router)
 
-**Price suggestion:** $29.99 USD
-
 ## License
 
 MIT © NeoSkillFactory
